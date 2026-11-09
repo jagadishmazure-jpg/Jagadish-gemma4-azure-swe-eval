@@ -49,7 +49,7 @@ weaknesses) have no meaningful surface here: no training, no secrets in the prom
   VM or gVisor per task.
 - `/etc` is mounted read-only inside the sandbox so tools work; it holds no secrets on this machine, but
   check that on any other host.
-- The first measured configuration started with an earlier sandbox that mounted the whole host
-  read-only (still no network, still only the workspace writable). The mounts were narrowed while it
-  ran. Every committed trajectory was checked: no command or path referred to anything outside the
-  workspace.
+- The main measured configuration ran with an earlier sandbox that mounted the whole host read-only
+  (still no network, still only the workspace writable). The mounts were narrowed before the other
+  configurations ran. Every committed trajectory was checked: no command or path referred to anything
+  outside the workspace.

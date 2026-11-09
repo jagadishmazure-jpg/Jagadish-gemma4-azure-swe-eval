@@ -554,124 +554,136 @@
    "mode": "agent"
   },
   "gemma4-e2b.oneshot": {
-   "n": 4,
+   "n": 39,
    "resolved": {
-    "k": 2,
-    "n": 4,
-    "rate": 0.5,
+    "k": 11,
+    "n": 39,
+    "rate": 0.2821,
     "ci95": [
-     0.15,
-     0.85
+     0.1654,
+     0.4378
     ]
    },
    "by_kind": {
     "named": {
-     "k": 1,
-     "n": 2,
-     "rate": 0.5,
+     "k": 5,
+     "n": 13,
+     "rate": 0.3846,
      "ci95": [
-      0.0945,
-      0.9055
+      0.1771,
+      0.6448
      ]
     },
     "symptom": {
-     "k": 1,
-     "n": 2,
-     "rate": 0.5,
+     "k": 5,
+     "n": 23,
+     "rate": 0.2174,
      "ci95": [
-      0.0945,
-      0.9055
+      0.0966,
+      0.419
+     ]
+    },
+    "multi": {
+     "k": 1,
+     "n": 3,
+     "rate": 0.3333,
+     "ci95": [
+      0.0615,
+      0.7923
      ]
     }
    },
    "by_split": {
     "dev": {
-     "k": 2,
-     "n": 2,
-     "rate": 1.0,
+     "k": 3,
+     "n": 7,
+     "rate": 0.4286,
      "ci95": [
-      0.3424,
-      1.0
+      0.1582,
+      0.7495
      ]
     },
     "test": {
-     "k": 0,
-     "n": 2,
-     "rate": 0.0,
+     "k": 8,
+     "n": 32,
+     "rate": 0.25,
      "ci95": [
-      0.0,
-      0.6576
+      0.1325,
+      0.4211
      ]
     }
    },
    "patch_nonempty": {
-    "k": 2,
-    "n": 4,
-    "rate": 0.5,
+    "k": 17,
+    "n": 39,
+    "rate": 0.4359,
     "ci95": [
-     0.15,
-     0.85
+     0.293,
+     0.5902
     ]
    },
    "patch_applied": {
-    "k": 2,
-    "n": 4,
-    "rate": 0.5,
+    "k": 17,
+    "n": 39,
+    "rate": 0.4359,
     "ci95": [
-     0.15,
-     0.85
+     0.293,
+     0.5902
     ]
    },
    "issue_test_only": {
-    "k": 2,
-    "n": 4,
-    "rate": 0.5,
+    "k": 11,
+    "n": 39,
+    "rate": 0.2821,
     "ci95": [
-     0.15,
-     0.85
+     0.1654,
+     0.4378
     ]
    },
    "regressions": 0,
    "touched_tests": 0,
    "stop": {
-    "submitted": 4
+    "no_tool_call": 10,
+    "submitted": 29
    },
    "failures": {
-    "no_patch:submitted_empty": 2
+    "no_patch:stopped_replying_with_tools": 10,
+    "no_patch:submitted_empty": 12,
+    "wrong_fix": 6
    },
    "tool_use": {
-    "edit_file": 5
+    "edit_file": 31
    },
    "unknown_tool_calls": 0,
-   "failed_tool_calls": 0,
-   "invalid_replies": 0,
+   "failed_tool_calls": 5,
+   "invalid_replies": 10,
    "ran_tests": {
     "k": 0,
-    "n": 4,
+    "n": 39,
     "rate": 0.0,
     "ci95": [
      0.0,
-     0.4899
+     0.0897
     ]
    },
    "resolved_when_no_tests": {
-    "k": 2,
-    "n": 4,
-    "rate": 0.5,
+    "k": 11,
+    "n": 39,
+    "rate": 0.2821,
     "ci95": [
-     0.15,
-     0.85
+     0.1654,
+     0.4378
     ]
    },
    "cost": {
     "tool_calls_p50": 1.0,
     "turns_p50": 1.0,
-    "prompt_tokens_p50": 3102.5,
-    "completion_tokens_p50": 129.0,
-    "seconds_p50": 38.8,
-    "seconds_p90": 41.4,
-    "cpu_minutes_total": 2.6,
-    "seconds_p50_resolved": 38.8
+    "prompt_tokens_p50": 3092.0,
+    "completion_tokens_p50": 127.0,
+    "seconds_p50": 43.0,
+    "seconds_p90": 67.2,
+    "cpu_minutes_total": 32.1,
+    "seconds_p50_resolved": 43.0
    },
    "model": "gemma-4-e2b",
    "mode": "oneshot"
@@ -835,11 +847,11 @@
    "mcnemar_p": 0.0352
   },
   "agent_vs_oneshot": {
-   "n": 4,
-   "both": 1,
-   "only_first": 1,
-   "only_second": 1,
-   "mcnemar_p": 1.0
+   "n": 39,
+   "both": 8,
+   "only_first": 9,
+   "only_second": 3,
+   "mcnemar_p": 0.146
   },
   "gemma_vs_qwen": {
    "n": 39,
@@ -887,6 +899,7 @@
    "noop": false,
    "gemma4-e2b.workflow": false,
    "gemma4-e2b.basic": false,
+   "gemma4-e2b.oneshot": false,
    "qwen2.5-1.5b.workflow": false
   },
   "units-half-kg-rounding": {
@@ -894,6 +907,7 @@
    "noop": false,
    "gemma4-e2b.workflow": false,
    "gemma4-e2b.basic": false,
+   "gemma4-e2b.oneshot": false,
    "qwen2.5-1.5b.workflow": false
   },
   "text-postcode-upper": {
@@ -901,6 +915,7 @@
    "noop": false,
    "gemma4-e2b.workflow": true,
    "gemma4-e2b.basic": false,
+   "gemma4-e2b.oneshot": true,
    "qwen2.5-1.5b.workflow": false
   },
   "text-postcode-inner-space": {
@@ -908,6 +923,7 @@
    "noop": false,
    "gemma4-e2b.workflow": false,
    "gemma4-e2b.basic": true,
+   "gemma4-e2b.oneshot": false,
    "qwen2.5-1.5b.workflow": false
   },
   "text-sku-digits": {
@@ -915,6 +931,7 @@
    "noop": false,
    "gemma4-e2b.workflow": true,
    "gemma4-e2b.basic": true,
+   "gemma4-e2b.oneshot": true,
    "qwen2.5-1.5b.workflow": false
   },
   "text-bool-digits": {
@@ -922,6 +939,7 @@
    "noop": false,
    "gemma4-e2b.workflow": false,
    "gemma4-e2b.basic": false,
+   "gemma4-e2b.oneshot": false,
    "qwen2.5-1.5b.workflow": false
   },
   "text-postcode-area": {
@@ -929,6 +947,7 @@
    "noop": false,
    "gemma4-e2b.workflow": true,
    "gemma4-e2b.basic": true,
+   "gemma4-e2b.oneshot": false,
    "qwen2.5-1.5b.workflow": false
   },
   "rates-zone-first-letter": {
@@ -936,6 +955,7 @@
    "noop": false,
    "gemma4-e2b.workflow": false,
    "gemma4-e2b.basic": false,
+   "gemma4-e2b.oneshot": false,
    "qwen2.5-1.5b.workflow": false
   },
   "rates-band-inclusive": {
@@ -943,6 +963,7 @@
    "noop": false,
    "gemma4-e2b.workflow": true,
    "gemma4-e2b.basic": false,
+   "gemma4-e2b.oneshot": false,
    "qwen2.5-1.5b.workflow": false
   },
   "rates-minimum-charge": {
@@ -950,6 +971,7 @@
    "noop": false,
    "gemma4-e2b.workflow": false,
    "gemma4-e2b.basic": false,
+   "gemma4-e2b.oneshot": false,
    "qwen2.5-1.5b.workflow": false
   },
   "rates-remote-fee-discounted": {
@@ -957,6 +979,7 @@
    "noop": false,
    "gemma4-e2b.workflow": true,
    "gemma4-e2b.basic": false,
+   "gemma4-e2b.oneshot": false,
    "qwen2.5-1.5b.workflow": false
   },
   "rates-half-up": {
@@ -964,6 +987,7 @@
    "noop": false,
    "gemma4-e2b.workflow": true,
    "gemma4-e2b.basic": false,
+   "gemma4-e2b.oneshot": true,
    "qwen2.5-1.5b.workflow": false
   },
   "rates-fuel-rate": {
@@ -971,6 +995,7 @@
    "noop": false,
    "gemma4-e2b.workflow": true,
    "gemma4-e2b.basic": true,
+   "gemma4-e2b.oneshot": true,
    "qwen2.5-1.5b.workflow": false
   },
   "rates-remote-dest-only": {
@@ -978,6 +1003,7 @@
    "noop": false,
    "gemma4-e2b.workflow": false,
    "gemma4-e2b.basic": false,
+   "gemma4-e2b.oneshot": false,
    "qwen2.5-1.5b.workflow": false
   },
   "rates-full-discount": {
@@ -985,6 +1011,7 @@
    "noop": false,
    "gemma4-e2b.workflow": true,
    "gemma4-e2b.basic": false,
+   "gemma4-e2b.oneshot": true,
    "qwen2.5-1.5b.workflow": false
   },
   "manifest-priority-case": {
@@ -992,6 +1019,7 @@
    "noop": false,
    "gemma4-e2b.workflow": false,
    "gemma4-e2b.basic": false,
+   "gemma4-e2b.oneshot": true,
    "qwen2.5-1.5b.workflow": false
   },
   "manifest-indented-comment": {
@@ -999,6 +1027,7 @@
    "noop": false,
    "gemma4-e2b.workflow": true,
    "gemma4-e2b.basic": false,
+   "gemma4-e2b.oneshot": false,
    "qwen2.5-1.5b.workflow": false
   },
   "manifest-last-wins": {
@@ -1006,6 +1035,7 @@
    "noop": false,
    "gemma4-e2b.workflow": false,
    "gemma4-e2b.basic": false,
+   "gemma4-e2b.oneshot": false,
    "qwen2.5-1.5b.workflow": false
   },
   "manifest-total-grams": {
@@ -1013,6 +1043,7 @@
    "noop": false,
    "gemma4-e2b.workflow": true,
    "gemma4-e2b.basic": false,
+   "gemma4-e2b.oneshot": false,
    "qwen2.5-1.5b.workflow": false
   },
   "manifest-zero-weight": {
@@ -1020,6 +1051,7 @@
    "noop": false,
    "gemma4-e2b.workflow": true,
    "gemma4-e2b.basic": false,
+   "gemma4-e2b.oneshot": true,
    "qwen2.5-1.5b.workflow": false
   },
   "manifest-trailing-semicolon": {
@@ -1027,6 +1059,7 @@
    "noop": false,
    "gemma4-e2b.workflow": false,
    "gemma4-e2b.basic": true,
+   "gemma4-e2b.oneshot": false,
    "qwen2.5-1.5b.workflow": false
   },
   "manifest-by-priority-keys": {
@@ -1034,6 +1067,7 @@
    "noop": false,
    "gemma4-e2b.workflow": false,
    "gemma4-e2b.basic": false,
+   "gemma4-e2b.oneshot": true,
    "qwen2.5-1.5b.workflow": false
   },
   "dock-touching-slots": {
@@ -1041,6 +1075,7 @@
    "noop": false,
    "gemma4-e2b.workflow": false,
    "gemma4-e2b.basic": false,
+   "gemma4-e2b.oneshot": false,
    "qwen2.5-1.5b.workflow": false
   },
   "dock-exact-gap": {
@@ -1048,6 +1083,7 @@
    "noop": false,
    "gemma4-e2b.workflow": false,
    "gemma4-e2b.basic": false,
+   "gemma4-e2b.oneshot": false,
    "qwen2.5-1.5b.workflow": false
   },
   "dock-close-boundary": {
@@ -1055,6 +1091,7 @@
    "noop": false,
    "gemma4-e2b.workflow": true,
    "gemma4-e2b.basic": false,
+   "gemma4-e2b.oneshot": false,
    "qwen2.5-1.5b.workflow": false
   },
   "dock-before-open": {
@@ -1062,6 +1099,7 @@
    "noop": false,
    "gemma4-e2b.workflow": true,
    "gemma4-e2b.basic": false,
+   "gemma4-e2b.oneshot": false,
    "qwen2.5-1.5b.workflow": false
   },
   "dock-utilization-clip": {
@@ -1069,6 +1107,7 @@
    "noop": false,
    "gemma4-e2b.workflow": false,
    "gemma4-e2b.basic": false,
+   "gemma4-e2b.oneshot": false,
    "qwen2.5-1.5b.workflow": false
   },
   "dock-fmt-padding": {
@@ -1076,6 +1115,7 @@
    "noop": false,
    "gemma4-e2b.workflow": true,
    "gemma4-e2b.basic": false,
+   "gemma4-e2b.oneshot": false,
    "qwen2.5-1.5b.workflow": false
   },
   "tracking-hold-in-transit": {
@@ -1083,6 +1123,7 @@
    "noop": false,
    "gemma4-e2b.workflow": false,
    "gemma4-e2b.basic": true,
+   "gemma4-e2b.oneshot": false,
    "qwen2.5-1.5b.workflow": false
   },
   "tracking-weekend": {
@@ -1090,6 +1131,7 @@
    "noop": false,
    "gemma4-e2b.workflow": false,
    "gemma4-e2b.basic": false,
+   "gemma4-e2b.oneshot": false,
    "qwen2.5-1.5b.workflow": false
   },
   "tracking-standard-days": {
@@ -1097,6 +1139,7 @@
    "noop": false,
    "gemma4-e2b.workflow": false,
    "gemma4-e2b.basic": false,
+   "gemma4-e2b.oneshot": false,
    "qwen2.5-1.5b.workflow": false
   },
   "tracking-late-on-day": {
@@ -1104,6 +1147,7 @@
    "noop": false,
    "gemma4-e2b.workflow": true,
    "gemma4-e2b.basic": true,
+   "gemma4-e2b.oneshot": true,
    "qwen2.5-1.5b.workflow": false
   },
   "tracking-state-update": {
@@ -1111,6 +1155,7 @@
    "noop": false,
    "gemma4-e2b.workflow": false,
    "gemma4-e2b.basic": false,
+   "gemma4-e2b.oneshot": false,
    "qwen2.5-1.5b.workflow": false
   },
   "tracking-unknown-state": {
@@ -1118,6 +1163,7 @@
    "noop": false,
    "gemma4-e2b.workflow": false,
    "gemma4-e2b.basic": false,
+   "gemma4-e2b.oneshot": false,
    "qwen2.5-1.5b.workflow": false
   },
   "timed-service": {
@@ -1125,6 +1171,7 @@
    "noop": false,
    "gemma4-e2b.workflow": false,
    "gemma4-e2b.basic": false,
+   "gemma4-e2b.oneshot": false,
    "qwen2.5-1.5b.workflow": false
   }
  }

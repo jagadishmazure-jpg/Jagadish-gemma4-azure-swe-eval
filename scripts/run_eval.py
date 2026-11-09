@@ -24,8 +24,8 @@ from sweval.evaluate import evaluate  # noqa: E402
 
 OUT = ROOT / "results"
 MAIN = "gemma4-e2b.workflow"
-FLOORS = {"main_resolved": 0.0, "main_minus_oneshot": 0.0}
-CEILINGS = {"main_regressions": 39}
+FLOORS = {"main_resolved": 0.4, "main_minus_oneshot": 0.1}  # set once from the measured run (0.436, +0.154)
+CEILINGS = {"main_regressions": 2}
 
 
 def pct(r: dict | None) -> str:

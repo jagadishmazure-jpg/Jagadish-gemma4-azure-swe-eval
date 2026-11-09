@@ -10,7 +10,7 @@ Budgets per task: {'max_turns': 14, 'max_tool_calls': 12, 'max_new_tokens': 256,
 | noop | baseline | 0.0% (0/39, 0.0-9.0%) | 0.0% (0/39, 0.0-9.0%) | 0.0% (0/13, 0.0-22.8%) | 0.0% (0/23, 0.0-14.3%) | 0.0% (0/3, 0.0-56.1%) | 0.0% (0/39, 0.0-9.0%) | 0.0% (0/39, 0.0-9.0%) | - | - |
 | gemma4-e2b.workflow | agent | 43.6% (17/39, 29.3-59.0%) | 48.7% (19/39, 33.9-63.8%) | 53.8% (7/13, 29.1-76.8%) | 34.8% (8/23, 18.8-55.1%) | 66.7% (2/3, 20.8-93.8%) | 69.2% (27/39, 53.6-81.4%) | 71.8% (28/39, 56.2-83.5%) | 65.1 | 5.0 |
 | gemma4-e2b.basic | agent | 20.5% (8/39, 10.8-35.5%) | 23.1% (9/39, 12.7-38.3%) | 30.8% (4/13, 12.7-57.6%) | 17.4% (4/23, 7.0-37.1%) | 0.0% (0/3, 0.0-56.1%) | 33.3% (13/39, 20.6-49.0%) | 0.0% (0/39, 0.0-9.0%) | 100.4 | 3.0 |
-| gemma4-e2b.oneshot | oneshot | 50.0% (2/4, 15.0-85.0%) | 50.0% (2/4, 15.0-85.0%) | 50.0% (1/2, 9.4-90.5%) | 50.0% (1/2, 9.4-90.5%) | n/a | 50.0% (2/4, 15.0-85.0%) | 0.0% (0/4, 0.0-49.0%) | 38.8 | 1.0 |
+| gemma4-e2b.oneshot | oneshot | 28.2% (11/39, 16.5-43.8%) | 28.2% (11/39, 16.5-43.8%) | 38.5% (5/13, 17.7-64.5%) | 21.7% (5/23, 9.7-41.9%) | 33.3% (1/3, 6.2-79.2%) | 43.6% (17/39, 29.3-59.0%) | 0.0% (0/39, 0.0-9.0%) | 43.0 | 1.0 |
 | qwen2.5-1.5b.workflow | agent | 0.0% (0/39, 0.0-9.0%) | 0.0% (0/39, 0.0-9.0%) | 0.0% (0/13, 0.0-22.8%) | 0.0% (0/23, 0.0-14.3%) | 0.0% (0/3, 0.0-56.1%) | 10.3% (4/39, 4.1-23.6%) | 46.2% (18/39, 31.6-61.4%) | 25.3 | 2.0 |
 
 ## Paired comparisons (same tasks, exact McNemar test)
@@ -18,21 +18,21 @@ Budgets per task: {'max_turns': 14, 'max_tool_calls': 12, 'max_new_tokens': 256,
 | Comparison | Tasks | Both solved | Only first | Only second | p |
 |---|---|---|---|---|---|
 | workflow_vs_basic | 39 | 5 | 12 | 3 | 0.0352 |
-| agent_vs_oneshot | 4 | 1 | 1 | 1 | 1.0 |
+| agent_vs_oneshot | 39 | 8 | 9 | 3 | 0.146 |
 | gemma_vs_qwen | 39 | 0 | 17 | 0 | 0.0 |
 
 ## Why tasks failed (one primary reason each)
 
 - gemma4-e2b.workflow: {'issue_test_passes_but_broke_other_behaviour': 2, 'no_patch:out_of_turns': 2, 'no_patch:stopped_replying_with_tools': 4, 'no_patch:submitted_empty': 6, 'wrong_fix': 8}; stop reasons {'max_turns': 2, 'no_tool_call': 4, 'submitted': 33}; invalid replies 44; calls to tools that do not exist 21; failed tool calls 70; regressions 2; patches touching tests 0
 - gemma4-e2b.basic: {'issue_test_passes_but_broke_other_behaviour': 1, 'no_patch:out_of_turns': 6, 'no_patch:stopped_replying_with_tools': 10, 'no_patch:submitted_empty': 10, 'wrong_fix': 4}; stop reasons {'max_turns': 6, 'no_tool_call': 10, 'submitted': 23}; invalid replies 69; calls to tools that do not exist 0; failed tool calls 94; regressions 1; patches touching tests 0
-- gemma4-e2b.oneshot: {'no_patch:submitted_empty': 2}; stop reasons {'submitted': 4}; invalid replies 0; calls to tools that do not exist 0; failed tool calls 0; regressions 0; patches touching tests 0
+- gemma4-e2b.oneshot: {'no_patch:stopped_replying_with_tools': 10, 'no_patch:submitted_empty': 12, 'wrong_fix': 6}; stop reasons {'no_tool_call': 10, 'submitted': 29}; invalid replies 10; calls to tools that do not exist 0; failed tool calls 5; regressions 0; patches touching tests 0
 - qwen2.5-1.5b.workflow: {'no_patch:out_of_turns': 1, 'no_patch:stopped_replying_with_tools': 10, 'no_patch:submitted_empty': 24, 'wrong_fix': 4}; stop reasons {'max_turns': 1, 'no_tool_call': 10, 'submitted': 28}; invalid replies 51; calls to tools that do not exist 0; failed tool calls 35; regressions 0; patches touching tests 0
 
 ## Split check (dev was used while writing the prompt; test was not)
 
 - gemma4-e2b.workflow: dev 28.6% (2/7, 8.2-64.1%), test 46.9% (15/32, 30.9-63.5%)
 - gemma4-e2b.basic: dev 0.0% (0/7, 0.0-35.4%), test 25.0% (8/32, 13.2-42.1%)
-- gemma4-e2b.oneshot: dev 100.0% (2/2, 34.2-100.0%), test 0.0% (0/2, 0.0-65.8%)
+- gemma4-e2b.oneshot: dev 42.9% (3/7, 15.8-75.0%), test 25.0% (8/32, 13.2-42.1%)
 - qwen2.5-1.5b.workflow: dev 0.0% (0/7, 0.0-35.4%), test 0.0% (0/32, 0.0-10.7%)
 
 ## Per task
@@ -45,26 +45,26 @@ Budgets per task: {'max_turns': 14, 'max_tool_calls': 12, 'max_new_tokens': 256,
 | units-dim-divisor | symptom | yes | yes | - | - |
 | units-chargeable-max | symptom | - | - | - | - |
 | units-half-kg-rounding | symptom | - | - | - | - |
-| text-postcode-upper | symptom | yes | - | - | - |
+| text-postcode-upper | symptom | yes | - | yes | - |
 | text-postcode-inner-space | named | - | yes | - | - |
-| text-sku-digits | named | yes | yes | - | - |
+| text-sku-digits | named | yes | yes | yes | - |
 | text-bool-digits | symptom | - | - | - | - |
 | text-postcode-area | named | yes | yes | - | - |
 | rates-zone-first-letter | symptom | - | - | - | - |
 | rates-band-inclusive | symptom | yes | - | - | - |
 | rates-minimum-charge | symptom | - | - | - | - |
 | rates-remote-fee-discounted | multi | yes | - | - | - |
-| rates-half-up | multi | yes | - | - | - |
-| rates-fuel-rate | named | yes | yes | - | - |
+| rates-half-up | multi | yes | - | yes | - |
+| rates-fuel-rate | named | yes | yes | yes | - |
 | rates-remote-dest-only | symptom | - | - | - | - |
-| rates-full-discount | named | yes | - | - | - |
-| manifest-priority-case | symptom | - | - | - | - |
+| rates-full-discount | named | yes | - | yes | - |
+| manifest-priority-case | symptom | - | - | yes | - |
 | manifest-indented-comment | symptom | yes | - | - | - |
 | manifest-last-wins | symptom | - | - | - | - |
 | manifest-total-grams | named | yes | - | - | - |
-| manifest-zero-weight | symptom | yes | - | - | - |
+| manifest-zero-weight | symptom | yes | - | yes | - |
 | manifest-trailing-semicolon | symptom | - | yes | - | - |
-| manifest-by-priority-keys | named | - | - | - | - |
+| manifest-by-priority-keys | named | - | - | yes | - |
 | dock-touching-slots | symptom | - | - | - | - |
 | dock-exact-gap | symptom | - | - | - | - |
 | dock-close-boundary | symptom | yes | - | - | - |
@@ -74,7 +74,7 @@ Budgets per task: {'max_turns': 14, 'max_tool_calls': 12, 'max_new_tokens': 256,
 | tracking-hold-in-transit | symptom | - | yes | - | - |
 | tracking-weekend | symptom | - | - | - | - |
 | tracking-standard-days | named | - | - | - | - |
-| tracking-late-on-day | symptom | yes | yes | - | - |
+| tracking-late-on-day | symptom | yes | yes | yes | - |
 | tracking-state-update | symptom | - | - | - | - |
 | tracking-unknown-state | named | - | - | - | - |
 | timed-service | multi | - | - | - | - |

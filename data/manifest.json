@@ -1,0 +1,8 @@
+{
+ "runs/gemma4-e2b.basic.jsonl": "29383c3549e2f35f656e39bfb8f52d60996e027042775675b567044602d8e805",
+ "runs/gemma4-e2b.oneshot.jsonl": "4ef7a9cf67fc25a8bbdd95cbf756302be5af4e2d4899f4e218d9cfd308057291",
+ "runs/gemma4-e2b.workflow.jsonl": "a20df7d81b89467cf3719e2ecffe54607b9229c31308fdf21b44eb95a5a100f8",
+ "runs/noop.jsonl": "7c47b9c0dbaf84c0e22f11c87c444c8381955e1ef926933fffbf8e8af3ebd333",
+ "runs/oracle.jsonl": "a3f1a187f0caffa33404ccf1ce7804c4e65ff0919569b0f87532f9dc5de333e0",
+ "runs/qwen2.5-1.5b.workflow.jsonl": "35ecb949aa2f7e6cde0bb50d68a000ab1c252bc61c243e2678f5cad16a0b7030"
+}
