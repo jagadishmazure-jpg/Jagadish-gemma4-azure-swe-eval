@@ -412,36 +412,189 @@
    "mode": "agent"
   },
   "gemma4-e2b.basic": {
-   "n": 20,
+   "n": 39,
    "resolved": {
-    "k": 5,
-    "n": 20,
-    "rate": 0.25,
+    "k": 8,
+    "n": 39,
+    "rate": 0.2051,
     "ci95": [
-     0.1119,
-     0.4687
+     0.1078,
+     0.3553
     ]
    },
    "by_kind": {
     "named": {
      "k": 4,
-     "n": 7,
-     "rate": 0.5714,
+     "n": 13,
+     "rate": 0.3077,
      "ci95": [
-      0.2505,
-      0.8418
+      0.1268,
+      0.5763
+     ]
+    },
+    "symptom": {
+     "k": 4,
+     "n": 23,
+     "rate": 0.1739,
+     "ci95": [
+      0.0698,
+      0.3714
+     ]
+    },
+    "multi": {
+     "k": 0,
+     "n": 3,
+     "rate": 0.0,
+     "ci95": [
+      0.0,
+      0.5615
+     ]
+    }
+   },
+   "by_split": {
+    "dev": {
+     "k": 0,
+     "n": 7,
+     "rate": 0.0,
+     "ci95": [
+      0.0,
+      0.3543
+     ]
+    },
+    "test": {
+     "k": 8,
+     "n": 32,
+     "rate": 0.25,
+     "ci95": [
+      0.1325,
+      0.4211
+     ]
+    }
+   },
+   "patch_nonempty": {
+    "k": 13,
+    "n": 39,
+    "rate": 0.3333,
+    "ci95": [
+     0.2063,
+     0.4902
+    ]
+   },
+   "patch_applied": {
+    "k": 13,
+    "n": 39,
+    "rate": 0.3333,
+    "ci95": [
+     0.2063,
+     0.4902
+    ]
+   },
+   "issue_test_only": {
+    "k": 9,
+    "n": 39,
+    "rate": 0.2308,
+    "ci95": [
+     0.1265,
+     0.3834
+    ]
+   },
+   "regressions": 1,
+   "touched_tests": 0,
+   "stop": {
+    "max_turns": 6,
+    "no_tool_call": 10,
+    "submitted": 23
+   },
+   "failures": {
+    "issue_test_passes_but_broke_other_behaviour": 1,
+    "no_patch:out_of_turns": 6,
+    "no_patch:stopped_replying_with_tools": 10,
+    "no_patch:submitted_empty": 10,
+    "wrong_fix": 4
+   },
+   "tool_use": {
+    "edit_file": 117,
+    "read_file": 96,
+    "run_command": 6,
+    "submit_patch": 23,
+    "write_file": 1
+   },
+   "unknown_tool_calls": 0,
+   "failed_tool_calls": 94,
+   "invalid_replies": 69,
+   "ran_tests": {
+    "k": 0,
+    "n": 39,
+    "rate": 0.0,
+    "ci95": [
+     0.0,
+     0.0897
+    ]
+   },
+   "resolved_when_no_tests": {
+    "k": 8,
+    "n": 39,
+    "rate": 0.2051,
+    "ci95": [
+     0.1078,
+     0.3553
+    ]
+   },
+   "cost": {
+    "tool_calls_p50": 3.0,
+    "turns_p50": 7.0,
+    "prompt_tokens_p50": 10234.0,
+    "completion_tokens_p50": 1031.0,
+    "seconds_p50": 100.4,
+    "seconds_p90": 230.5,
+    "cpu_minutes_total": 83.3,
+    "seconds_p50_resolved": 49.7
+   },
+   "model": "gemma-4-e2b",
+   "mode": "agent"
+  },
+  "gemma4-e2b.oneshot": {
+   "n": 4,
+   "resolved": {
+    "k": 2,
+    "n": 4,
+    "rate": 0.5,
+    "ci95": [
+     0.15,
+     0.85
+    ]
+   },
+   "by_kind": {
+    "named": {
+     "k": 1,
+     "n": 2,
+     "rate": 0.5,
+     "ci95": [
+      0.0945,
+      0.9055
      ]
     },
     "symptom": {
      "k": 1,
-     "n": 11,
-     "rate": 0.0909,
+     "n": 2,
+     "rate": 0.5,
      "ci95": [
-      0.0162,
-      0.3774
+      0.0945,
+      0.9055
+     ]
+    }
+   },
+   "by_split": {
+    "dev": {
+     "k": 2,
+     "n": 2,
+     "rate": 1.0,
+     "ci95": [
+      0.3424,
+      1.0
      ]
     },
-    "multi": {
+    "test": {
      "k": 0,
      "n": 2,
      "rate": 0.0,
@@ -451,107 +604,77 @@
      ]
     }
    },
-   "by_split": {
-    "dev": {
-     "k": 0,
-     "n": 4,
-     "rate": 0.0,
-     "ci95": [
-      0.0,
-      0.4899
-     ]
-    },
-    "test": {
-     "k": 5,
-     "n": 16,
-     "rate": 0.3125,
-     "ci95": [
-      0.1416,
-      0.556
-     ]
-    }
-   },
    "patch_nonempty": {
-    "k": 9,
-    "n": 20,
-    "rate": 0.45,
+    "k": 2,
+    "n": 4,
+    "rate": 0.5,
     "ci95": [
-     0.2582,
-     0.6579
+     0.15,
+     0.85
     ]
    },
    "patch_applied": {
-    "k": 9,
-    "n": 20,
-    "rate": 0.45,
+    "k": 2,
+    "n": 4,
+    "rate": 0.5,
     "ci95": [
-     0.2582,
-     0.6579
+     0.15,
+     0.85
     ]
    },
    "issue_test_only": {
-    "k": 6,
-    "n": 20,
-    "rate": 0.3,
+    "k": 2,
+    "n": 4,
+    "rate": 0.5,
     "ci95": [
-     0.1455,
-     0.519
+     0.15,
+     0.85
     ]
    },
-   "regressions": 1,
+   "regressions": 0,
    "touched_tests": 0,
    "stop": {
-    "max_turns": 1,
-    "no_tool_call": 5,
-    "submitted": 14
+    "submitted": 4
    },
    "failures": {
-    "issue_test_passes_but_broke_other_behaviour": 1,
-    "no_patch:out_of_turns": 1,
-    "no_patch:stopped_replying_with_tools": 5,
-    "no_patch:submitted_empty": 5,
-    "wrong_fix": 3
+    "no_patch:submitted_empty": 2
    },
    "tool_use": {
-    "edit_file": 48,
-    "read_file": 38,
-    "run_command": 4,
-    "submit_patch": 14,
-    "write_file": 1
+    "edit_file": 5
    },
    "unknown_tool_calls": 0,
-   "failed_tool_calls": 27,
-   "invalid_replies": 29,
+   "failed_tool_calls": 0,
+   "invalid_replies": 0,
    "ran_tests": {
     "k": 0,
-    "n": 20,
+    "n": 4,
     "rate": 0.0,
     "ci95": [
      0.0,
-     0.1611
+     0.4899
     ]
    },
    "resolved_when_no_tests": {
-    "k": 5,
-    "n": 20,
-    "rate": 0.25,
+    "k": 2,
+    "n": 4,
+    "rate": 0.5,
     "ci95": [
-     0.1119,
-     0.4687
+     0.15,
+     0.85
     ]
    },
    "cost": {
-    "tool_calls_p50": 3.0,
-    "turns_p50": 6.0,
-    "prompt_tokens_p50": 8397.5,
-    "completion_tokens_p50": 989.0,
-    "seconds_p50": 81.6,
-    "seconds_p90": 150.0,
-    "cpu_minutes_total": 30.1,
-    "seconds_p50_resolved": 25.3
+    "tool_calls_p50": 1.0,
+    "turns_p50": 1.0,
+    "prompt_tokens_p50": 3102.5,
+    "completion_tokens_p50": 129.0,
+    "seconds_p50": 38.8,
+    "seconds_p90": 41.4,
+    "cpu_minutes_total": 2.6,
+    "seconds_p50_resolved": 38.8
    },
    "model": "gemma-4-e2b",
-   "mode": "agent"
+   "mode": "oneshot"
   },
   "qwen2.5-1.5b.workflow": {
    "n": 39,
@@ -705,11 +828,18 @@
  },
  "paired": {
   "workflow_vs_basic": {
-   "n": 20,
-   "both": 4,
-   "only_first": 6,
+   "n": 39,
+   "both": 5,
+   "only_first": 12,
+   "only_second": 3,
+   "mcnemar_p": 0.0352
+  },
+  "agent_vs_oneshot": {
+   "n": 4,
+   "both": 1,
+   "only_first": 1,
    "only_second": 1,
-   "mcnemar_p": 0.125
+   "mcnemar_p": 1.0
   },
   "gemma_vs_qwen": {
    "n": 39,
@@ -725,6 +855,7 @@
    "noop": false,
    "gemma4-e2b.workflow": false,
    "gemma4-e2b.basic": false,
+   "gemma4-e2b.oneshot": false,
    "qwen2.5-1.5b.workflow": false
   },
   "units-lb-to-kg": {
@@ -732,6 +863,7 @@
    "noop": false,
    "gemma4-e2b.workflow": false,
    "gemma4-e2b.basic": false,
+   "gemma4-e2b.oneshot": true,
    "qwen2.5-1.5b.workflow": false
   },
   "units-zero-dimension": {
@@ -739,6 +871,7 @@
    "noop": false,
    "gemma4-e2b.workflow": true,
    "gemma4-e2b.basic": false,
+   "gemma4-e2b.oneshot": true,
    "qwen2.5-1.5b.workflow": false
   },
   "units-dim-divisor": {
@@ -746,6 +879,7 @@
    "noop": false,
    "gemma4-e2b.workflow": true,
    "gemma4-e2b.basic": true,
+   "gemma4-e2b.oneshot": false,
    "qwen2.5-1.5b.workflow": false
   },
   "units-chargeable-max": {
@@ -864,114 +998,133 @@
    "oracle": true,
    "noop": false,
    "gemma4-e2b.workflow": true,
+   "gemma4-e2b.basic": false,
    "qwen2.5-1.5b.workflow": false
   },
   "manifest-last-wins": {
    "oracle": true,
    "noop": false,
    "gemma4-e2b.workflow": false,
+   "gemma4-e2b.basic": false,
    "qwen2.5-1.5b.workflow": false
   },
   "manifest-total-grams": {
    "oracle": true,
    "noop": false,
    "gemma4-e2b.workflow": true,
+   "gemma4-e2b.basic": false,
    "qwen2.5-1.5b.workflow": false
   },
   "manifest-zero-weight": {
    "oracle": true,
    "noop": false,
    "gemma4-e2b.workflow": true,
+   "gemma4-e2b.basic": false,
    "qwen2.5-1.5b.workflow": false
   },
   "manifest-trailing-semicolon": {
    "oracle": true,
    "noop": false,
    "gemma4-e2b.workflow": false,
+   "gemma4-e2b.basic": true,
    "qwen2.5-1.5b.workflow": false
   },
   "manifest-by-priority-keys": {
    "oracle": true,
    "noop": false,
    "gemma4-e2b.workflow": false,
+   "gemma4-e2b.basic": false,
    "qwen2.5-1.5b.workflow": false
   },
   "dock-touching-slots": {
    "oracle": true,
    "noop": false,
    "gemma4-e2b.workflow": false,
+   "gemma4-e2b.basic": false,
    "qwen2.5-1.5b.workflow": false
   },
   "dock-exact-gap": {
    "oracle": true,
    "noop": false,
    "gemma4-e2b.workflow": false,
+   "gemma4-e2b.basic": false,
    "qwen2.5-1.5b.workflow": false
   },
   "dock-close-boundary": {
    "oracle": true,
    "noop": false,
    "gemma4-e2b.workflow": true,
+   "gemma4-e2b.basic": false,
    "qwen2.5-1.5b.workflow": false
   },
   "dock-before-open": {
    "oracle": true,
    "noop": false,
    "gemma4-e2b.workflow": true,
+   "gemma4-e2b.basic": false,
    "qwen2.5-1.5b.workflow": false
   },
   "dock-utilization-clip": {
    "oracle": true,
    "noop": false,
    "gemma4-e2b.workflow": false,
+   "gemma4-e2b.basic": false,
    "qwen2.5-1.5b.workflow": false
   },
   "dock-fmt-padding": {
    "oracle": true,
    "noop": false,
    "gemma4-e2b.workflow": true,
+   "gemma4-e2b.basic": false,
    "qwen2.5-1.5b.workflow": false
   },
   "tracking-hold-in-transit": {
    "oracle": true,
    "noop": false,
    "gemma4-e2b.workflow": false,
+   "gemma4-e2b.basic": true,
    "qwen2.5-1.5b.workflow": false
   },
   "tracking-weekend": {
    "oracle": true,
    "noop": false,
    "gemma4-e2b.workflow": false,
+   "gemma4-e2b.basic": false,
    "qwen2.5-1.5b.workflow": false
   },
   "tracking-standard-days": {
    "oracle": true,
    "noop": false,
    "gemma4-e2b.workflow": false,
+   "gemma4-e2b.basic": false,
    "qwen2.5-1.5b.workflow": false
   },
   "tracking-late-on-day": {
    "oracle": true,
    "noop": false,
    "gemma4-e2b.workflow": true,
+   "gemma4-e2b.basic": true,
    "qwen2.5-1.5b.workflow": false
   },
   "tracking-state-update": {
    "oracle": true,
    "noop": false,
    "gemma4-e2b.workflow": false,
+   "gemma4-e2b.basic": false,
    "qwen2.5-1.5b.workflow": false
   },
   "tracking-unknown-state": {
    "oracle": true,
    "noop": false,
    "gemma4-e2b.workflow": false,
+   "gemma4-e2b.basic": false,
    "qwen2.5-1.5b.workflow": false
   },
   "timed-service": {
    "oracle": true,
    "noop": false,
    "gemma4-e2b.workflow": false,
+   "gemma4-e2b.basic": false,
    "qwen2.5-1.5b.workflow": false
   }
  }
