@@ -33,7 +33,7 @@ Gemma 4 E2B: wrong fixes, submitting with no change, replies without a tool call
 tool that does not exist (21<!-- m:configs/gemma4-e2b.workflow/unknown_tool_calls --> times) instead of
 `run_command`. Qwen2.5 1.5B resolved 0.0%<!-- m:configs/qwen2.5-1.5b.workflow/resolved/rate -->: it mostly ran
 commands and then submitted without editing
-({{configs/qwen2.5-1.5b.workflow/failures/no_patch:submitted_empty|int}} of 39).
+(24<!-- m:configs/qwen2.5-1.5b.workflow/failures/no_patch:submitted_empty --> of 39).
 
 ## What about the prompt?
 

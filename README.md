@@ -106,9 +106,9 @@ official quantization-aware Q4_0 weights on CPU.
 **How the main agent failed** (one primary reason per unresolved task, from
 [results/report.md](results/report.md)): wrong fix
 8<!-- m:configs/gemma4-e2b.workflow/failures/wrong_fix -->, submitted without changing anything
-{{configs/gemma4-e2b.workflow/failures/no_patch:submitted_empty|int}}, stopped producing tool calls
-{{configs/gemma4-e2b.workflow/failures/no_patch:stopped_replying_with_tools|int}}, ran out of turns
-{{configs/gemma4-e2b.workflow/failures/no_patch:out_of_turns|int}}, and fixed the issue's test by
+6<!-- m:configs/gemma4-e2b.workflow/failures/no_patch:submitted_empty -->, stopped producing tool calls
+4<!-- m:configs/gemma4-e2b.workflow/failures/no_patch:stopped_replying_with_tools -->, ran out of turns
+2<!-- m:configs/gemma4-e2b.workflow/failures/no_patch:out_of_turns -->, and fixed the issue's test by
 breaking other behaviour 2<!-- m:configs/gemma4-e2b.workflow/failures/issue_test_passes_but_broke_other_behaviour -->.
 It called a `grep` tool that does not exist 21<!-- m:configs/gemma4-e2b.workflow/unknown_tool_calls --> times
 (the tool list offers `run_command` for that), and 44<!-- m:configs/gemma4-e2b.workflow/invalid_replies -->
@@ -117,10 +117,10 @@ replies had no tool call at all. It never edited a test.
 **What this shows about agentic AI for this kind of work:**
 
 - **The loop plus a good working method is what helps.** With the workflow prompt the agent resolved
-  9<!-- m:paired/agent_vs_oneshot/only_first --> tasks the one-shot model missed and missed only
-  3<!-- m:paired/agent_vs_oneshot/only_second --> it solved; with 39 tasks that difference is suggestive,
-  not significant (p = 0.146<!-- m:paired/agent_vs_oneshot/mcnemar_p -->). The same loop with a one-line prompt did
-  worse than one shot (20.5%<!-- m:configs/gemma4-e2b.basic/resolved/rate -->): it never ran the tests
+  9<!-- m:paired/agent_vs_oneshot/only_first --> tasks the one-shot model missed, while the one-shot model
+  solved 3<!-- m:paired/agent_vs_oneshot/only_second --> the agent missed; with 39 tasks that difference is suggestive,
+  not significant (p = 0.146<!-- m:paired/agent_vs_oneshot/mcnemar_p -->). The same loop with a one-line prompt scored
+  lower than one shot (20.5%<!-- m:configs/gemma4-e2b.basic/resolved/rate -->): it never ran the tests
   (0.0%<!-- m:configs/gemma4-e2b.basic/ran_tests/rate --> of tasks) and often wandered until the turn limit.
 - **Running the tests is the step that matters.** Tasks where the agent ran the test suite were
   resolved 57.1%<!-- m:configs/gemma4-e2b.workflow/resolved_when_ran_tests/rate --> of the time
@@ -132,7 +132,7 @@ replies had no tool call at all. It never edited a test.
   53.8%<!-- m:configs/gemma4-e2b.workflow/by_kind/named/rate --> when the issue names the function.
 - **Model size and family matter more than anything else here.** Qwen2.5 1.5B in the same loop
   resolved nothing: it ran commands and then submitted without editing in
-  {{configs/qwen2.5-1.5b.workflow/failures/no_patch:submitted_empty|int}} of 39 tasks.
+  24<!-- m:configs/qwen2.5-1.5b.workflow/failures/no_patch:submitted_empty --> of 39 tasks.
 - **Grade with more than the issue's test.** An issue-test-only grader would have reported
   48.7%<!-- m:configs/gemma4-e2b.workflow/issue_test_only/rate --> for the main agent instead of
   43.6%<!-- m:configs/gemma4-e2b.workflow/resolved/rate -->.
