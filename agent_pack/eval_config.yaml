@@ -1,0 +1,4 @@
+# Per-task budgets, matching sweval.agent.LIMITS.
+max_tool_calls: 12
+max_turns: 14
+timeout_seconds: 900

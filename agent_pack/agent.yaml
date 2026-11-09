@@ -1,0 +1,15 @@
+# Declarative agent config (ADK Agent Config format). The instruction is the exact prompt measured on
+# CPU in this repo (agent_pack/prompts/system.md); tool budgets match sweval.agent.LIMITS.
+agent_class: LlmAgent
+name: freight_fixer
+model: gemma-4-e2b-it
+description: Fixes one reported issue in a Python repository and submits a patch.
+instruction: !include prompts/system.md
+generate_content_config: !include configs/sampling.yaml
+tools:
+  - name: run_command
+  - name: read_file
+  - name: edit_file
+  - name: write_file
+  - name: get_status
+  - name: submit_patch

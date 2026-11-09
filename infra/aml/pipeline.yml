@@ -1,0 +1,28 @@
+# Azure ML pipeline (Microsoft Foundry hub-based project) that runs the same coding-agent evaluation on
+# a GPU node. WRITTEN, NOT RUN. Submitted only by the gated deploy workflow:
+#   az ml job create -f infra/aml/pipeline.yml -g rg-sweeval-dev -w mlw-sweeval-dev
+# vLLM serves Gemma 4 E4B (16-bit weights, cast to fp16 on the T4) on localhost; the agent
+# talks to it through sweval/llm_http.py instead of llama.cpp. Weights come from the open model hub.
+$schema: https://azuremlschemas.azureedge.net/latest/pipelineJob.schema.json
+type: pipeline
+display_name: swe-agent-eval
+experiment_name: swe-agent-eval
+settings:
+  default_compute: azureml:gpu-eval
+  continue_on_step_failure: false
+jobs:
+  agent_eval:
+    type: command
+    code: ../..
+    environment:
+      image: mcr.microsoft.com/azureml/openmpi5.0-cuda12.8-ubuntu24.04:20261108.v1
+      conda_file: environment.yml
+    command: >-
+      (vllm serve google/gemma-4-E4B-it --revision 4ecc2ba63bcac23ba4a767fc87025b1450f84c9c --max-model-len 8192 --port 8000 > vllm.log 2>&1 &)
+      && python scripts/wait_for_endpoint.py http://127.0.0.1:8000/v1
+      && python scripts/run_agent.py --config gemma4-e4b.workflow --endpoint http://127.0.0.1:8000/v1
+      && python scripts/run_eval.py --runs-only
+      && cp -r data/runs results ${{outputs.eval}}
+    outputs:
+      eval:
+        type: uri_folder

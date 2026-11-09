@@ -1,0 +1,978 @@
+{
+ "suite": {
+  "tasks": 39,
+  "by_kind": {
+   "multi": 3,
+   "named": 13,
+   "symptom": 23
+  },
+  "by_split": {
+   "dev": 7,
+   "test": 32
+  },
+  "files": 7,
+  "bugs_caught_by_visible_tests": 8,
+  "bugs_caught_by_regression_suite": 38
+ },
+ "limits": {
+  "max_turns": 14,
+  "max_tool_calls": 12,
+  "max_new_tokens": 256,
+  "n_ctx": 8192,
+  "no_call_streak": 3
+ },
+ "configs": {
+  "oracle": {
+   "n": 39,
+   "resolved": {
+    "k": 39,
+    "n": 39,
+    "rate": 1.0,
+    "ci95": [
+     0.9103,
+     1.0
+    ]
+   },
+   "by_kind": {
+    "named": {
+     "k": 13,
+     "n": 13,
+     "rate": 1.0,
+     "ci95": [
+      0.7719,
+      1.0
+     ]
+    },
+    "symptom": {
+     "k": 23,
+     "n": 23,
+     "rate": 1.0,
+     "ci95": [
+      0.8569,
+      1.0
+     ]
+    },
+    "multi": {
+     "k": 3,
+     "n": 3,
+     "rate": 1.0,
+     "ci95": [
+      0.4385,
+      1.0
+     ]
+    }
+   },
+   "by_split": {
+    "dev": {
+     "k": 7,
+     "n": 7,
+     "rate": 1.0,
+     "ci95": [
+      0.6457,
+      1.0
+     ]
+    },
+    "test": {
+     "k": 32,
+     "n": 32,
+     "rate": 1.0,
+     "ci95": [
+      0.8928,
+      1.0
+     ]
+    }
+   },
+   "patch_nonempty": {
+    "k": 39,
+    "n": 39,
+    "rate": 1.0,
+    "ci95": [
+     0.9103,
+     1.0
+    ]
+   },
+   "patch_applied": {
+    "k": 39,
+    "n": 39,
+    "rate": 1.0,
+    "ci95": [
+     0.9103,
+     1.0
+    ]
+   },
+   "issue_test_only": {
+    "k": 39,
+    "n": 39,
+    "rate": 1.0,
+    "ci95": [
+     0.9103,
+     1.0
+    ]
+   },
+   "regressions": 0,
+   "touched_tests": 0,
+   "stop": {
+    "submitted": 39
+   },
+   "failures": {},
+   "tool_use": {},
+   "unknown_tool_calls": 0,
+   "failed_tool_calls": 0,
+   "invalid_replies": 0,
+   "ran_tests": {
+    "k": 0,
+    "n": 39,
+    "rate": 0.0,
+    "ci95": [
+     0.0,
+     0.0897
+    ]
+   },
+   "resolved_when_no_tests": {
+    "k": 39,
+    "n": 39,
+    "rate": 1.0,
+    "ci95": [
+     0.9103,
+     1.0
+    ]
+   },
+   "model": "-",
+   "mode": "baseline"
+  },
+  "noop": {
+   "n": 39,
+   "resolved": {
+    "k": 0,
+    "n": 39,
+    "rate": 0.0,
+    "ci95": [
+     0.0,
+     0.0897
+    ]
+   },
+   "by_kind": {
+    "named": {
+     "k": 0,
+     "n": 13,
+     "rate": 0.0,
+     "ci95": [
+      0.0,
+      0.2281
+     ]
+    },
+    "symptom": {
+     "k": 0,
+     "n": 23,
+     "rate": 0.0,
+     "ci95": [
+      0.0,
+      0.1431
+     ]
+    },
+    "multi": {
+     "k": 0,
+     "n": 3,
+     "rate": 0.0,
+     "ci95": [
+      0.0,
+      0.5615
+     ]
+    }
+   },
+   "by_split": {
+    "dev": {
+     "k": 0,
+     "n": 7,
+     "rate": 0.0,
+     "ci95": [
+      0.0,
+      0.3543
+     ]
+    },
+    "test": {
+     "k": 0,
+     "n": 32,
+     "rate": 0.0,
+     "ci95": [
+      0.0,
+      0.1072
+     ]
+    }
+   },
+   "patch_nonempty": {
+    "k": 0,
+    "n": 39,
+    "rate": 0.0,
+    "ci95": [
+     0.0,
+     0.0897
+    ]
+   },
+   "patch_applied": {
+    "k": 0,
+    "n": 39,
+    "rate": 0.0,
+    "ci95": [
+     0.0,
+     0.0897
+    ]
+   },
+   "issue_test_only": {
+    "k": 0,
+    "n": 39,
+    "rate": 0.0,
+    "ci95": [
+     0.0,
+     0.0897
+    ]
+   },
+   "regressions": 0,
+   "touched_tests": 0,
+   "stop": {
+    "submitted": 39
+   },
+   "failures": {
+    "no_patch:submitted_empty": 39
+   },
+   "tool_use": {},
+   "unknown_tool_calls": 0,
+   "failed_tool_calls": 0,
+   "invalid_replies": 0,
+   "ran_tests": {
+    "k": 0,
+    "n": 39,
+    "rate": 0.0,
+    "ci95": [
+     0.0,
+     0.0897
+    ]
+   },
+   "resolved_when_no_tests": {
+    "k": 0,
+    "n": 39,
+    "rate": 0.0,
+    "ci95": [
+     0.0,
+     0.0897
+    ]
+   },
+   "model": "-",
+   "mode": "baseline"
+  },
+  "gemma4-e2b.workflow": {
+   "n": 39,
+   "resolved": {
+    "k": 17,
+    "n": 39,
+    "rate": 0.4359,
+    "ci95": [
+     0.293,
+     0.5902
+    ]
+   },
+   "by_kind": {
+    "named": {
+     "k": 7,
+     "n": 13,
+     "rate": 0.5385,
+     "ci95": [
+      0.2914,
+      0.7679
+     ]
+    },
+    "symptom": {
+     "k": 8,
+     "n": 23,
+     "rate": 0.3478,
+     "ci95": [
+      0.1881,
+      0.5511
+     ]
+    },
+    "multi": {
+     "k": 2,
+     "n": 3,
+     "rate": 0.6667,
+     "ci95": [
+      0.2077,
+      0.9385
+     ]
+    }
+   },
+   "by_split": {
+    "dev": {
+     "k": 2,
+     "n": 7,
+     "rate": 0.2857,
+     "ci95": [
+      0.0822,
+      0.6411
+     ]
+    },
+    "test": {
+     "k": 15,
+     "n": 32,
+     "rate": 0.4688,
+     "ci95": [
+      0.3087,
+      0.6355
+     ]
+    }
+   },
+   "patch_nonempty": {
+    "k": 27,
+    "n": 39,
+    "rate": 0.6923,
+    "ci95": [
+     0.5358,
+     0.8143
+    ]
+   },
+   "patch_applied": {
+    "k": 27,
+    "n": 39,
+    "rate": 0.6923,
+    "ci95": [
+     0.5358,
+     0.8143
+    ]
+   },
+   "issue_test_only": {
+    "k": 19,
+    "n": 39,
+    "rate": 0.4872,
+    "ci95": [
+     0.3386,
+     0.638
+    ]
+   },
+   "regressions": 2,
+   "touched_tests": 0,
+   "stop": {
+    "max_turns": 2,
+    "no_tool_call": 4,
+    "submitted": 33
+   },
+   "failures": {
+    "issue_test_passes_but_broke_other_behaviour": 2,
+    "no_patch:out_of_turns": 2,
+    "no_patch:stopped_replying_with_tools": 4,
+    "no_patch:submitted_empty": 6,
+    "wrong_fix": 8
+   },
+   "tool_use": {
+    "edit_file": 71,
+    "grep": 21,
+    "read_file": 84,
+    "run_command": 46,
+    "submit_patch": 33
+   },
+   "unknown_tool_calls": 21,
+   "failed_tool_calls": 70,
+   "invalid_replies": 44,
+   "ran_tests": {
+    "k": 28,
+    "n": 39,
+    "rate": 0.7179,
+    "ci95": [
+     0.5622,
+     0.8346
+    ]
+   },
+   "resolved_when_ran_tests": {
+    "k": 16,
+    "n": 28,
+    "rate": 0.5714,
+    "ci95": [
+     0.3907,
+     0.7349
+    ]
+   },
+   "resolved_when_no_tests": {
+    "k": 1,
+    "n": 11,
+    "rate": 0.0909,
+    "ci95": [
+     0.0162,
+     0.3774
+    ]
+   },
+   "cost": {
+    "tool_calls_p50": 5.0,
+    "turns_p50": 7.0,
+    "prompt_tokens_p50": 9570.0,
+    "completion_tokens_p50": 755.0,
+    "seconds_p50": 65.1,
+    "seconds_p90": 155.1,
+    "cpu_minutes_total": 52.2,
+    "seconds_p50_resolved": 37.6
+   },
+   "model": "gemma-4-e2b",
+   "mode": "agent"
+  },
+  "gemma4-e2b.basic": {
+   "n": 20,
+   "resolved": {
+    "k": 5,
+    "n": 20,
+    "rate": 0.25,
+    "ci95": [
+     0.1119,
+     0.4687
+    ]
+   },
+   "by_kind": {
+    "named": {
+     "k": 4,
+     "n": 7,
+     "rate": 0.5714,
+     "ci95": [
+      0.2505,
+      0.8418
+     ]
+    },
+    "symptom": {
+     "k": 1,
+     "n": 11,
+     "rate": 0.0909,
+     "ci95": [
+      0.0162,
+      0.3774
+     ]
+    },
+    "multi": {
+     "k": 0,
+     "n": 2,
+     "rate": 0.0,
+     "ci95": [
+      0.0,
+      0.6576
+     ]
+    }
+   },
+   "by_split": {
+    "dev": {
+     "k": 0,
+     "n": 4,
+     "rate": 0.0,
+     "ci95": [
+      0.0,
+      0.4899
+     ]
+    },
+    "test": {
+     "k": 5,
+     "n": 16,
+     "rate": 0.3125,
+     "ci95": [
+      0.1416,
+      0.556
+     ]
+    }
+   },
+   "patch_nonempty": {
+    "k": 9,
+    "n": 20,
+    "rate": 0.45,
+    "ci95": [
+     0.2582,
+     0.6579
+    ]
+   },
+   "patch_applied": {
+    "k": 9,
+    "n": 20,
+    "rate": 0.45,
+    "ci95": [
+     0.2582,
+     0.6579
+    ]
+   },
+   "issue_test_only": {
+    "k": 6,
+    "n": 20,
+    "rate": 0.3,
+    "ci95": [
+     0.1455,
+     0.519
+    ]
+   },
+   "regressions": 1,
+   "touched_tests": 0,
+   "stop": {
+    "max_turns": 1,
+    "no_tool_call": 5,
+    "submitted": 14
+   },
+   "failures": {
+    "issue_test_passes_but_broke_other_behaviour": 1,
+    "no_patch:out_of_turns": 1,
+    "no_patch:stopped_replying_with_tools": 5,
+    "no_patch:submitted_empty": 5,
+    "wrong_fix": 3
+   },
+   "tool_use": {
+    "edit_file": 48,
+    "read_file": 38,
+    "run_command": 4,
+    "submit_patch": 14,
+    "write_file": 1
+   },
+   "unknown_tool_calls": 0,
+   "failed_tool_calls": 27,
+   "invalid_replies": 29,
+   "ran_tests": {
+    "k": 0,
+    "n": 20,
+    "rate": 0.0,
+    "ci95": [
+     0.0,
+     0.1611
+    ]
+   },
+   "resolved_when_no_tests": {
+    "k": 5,
+    "n": 20,
+    "rate": 0.25,
+    "ci95": [
+     0.1119,
+     0.4687
+    ]
+   },
+   "cost": {
+    "tool_calls_p50": 3.0,
+    "turns_p50": 6.0,
+    "prompt_tokens_p50": 8397.5,
+    "completion_tokens_p50": 989.0,
+    "seconds_p50": 81.6,
+    "seconds_p90": 150.0,
+    "cpu_minutes_total": 30.1,
+    "seconds_p50_resolved": 25.3
+   },
+   "model": "gemma-4-e2b",
+   "mode": "agent"
+  },
+  "qwen2.5-1.5b.workflow": {
+   "n": 39,
+   "resolved": {
+    "k": 0,
+    "n": 39,
+    "rate": 0.0,
+    "ci95": [
+     0.0,
+     0.0897
+    ]
+   },
+   "by_kind": {
+    "named": {
+     "k": 0,
+     "n": 13,
+     "rate": 0.0,
+     "ci95": [
+      0.0,
+      0.2281
+     ]
+    },
+    "symptom": {
+     "k": 0,
+     "n": 23,
+     "rate": 0.0,
+     "ci95": [
+      0.0,
+      0.1431
+     ]
+    },
+    "multi": {
+     "k": 0,
+     "n": 3,
+     "rate": 0.0,
+     "ci95": [
+      0.0,
+      0.5615
+     ]
+    }
+   },
+   "by_split": {
+    "dev": {
+     "k": 0,
+     "n": 7,
+     "rate": 0.0,
+     "ci95": [
+      0.0,
+      0.3543
+     ]
+    },
+    "test": {
+     "k": 0,
+     "n": 32,
+     "rate": 0.0,
+     "ci95": [
+      0.0,
+      0.1072
+     ]
+    }
+   },
+   "patch_nonempty": {
+    "k": 4,
+    "n": 39,
+    "rate": 0.1026,
+    "ci95": [
+     0.0406,
+     0.2358
+    ]
+   },
+   "patch_applied": {
+    "k": 4,
+    "n": 39,
+    "rate": 0.1026,
+    "ci95": [
+     0.0406,
+     0.2358
+    ]
+   },
+   "issue_test_only": {
+    "k": 0,
+    "n": 39,
+    "rate": 0.0,
+    "ci95": [
+     0.0,
+     0.0897
+    ]
+   },
+   "regressions": 0,
+   "touched_tests": 0,
+   "stop": {
+    "max_turns": 1,
+    "no_tool_call": 10,
+    "submitted": 28
+   },
+   "failures": {
+    "no_patch:out_of_turns": 1,
+    "no_patch:stopped_replying_with_tools": 10,
+    "no_patch:submitted_empty": 24,
+    "wrong_fix": 4
+   },
+   "tool_use": {
+    "edit_file": 37,
+    "get_status": 8,
+    "read_file": 45,
+    "run_command": 125,
+    "submit_patch": 28
+   },
+   "unknown_tool_calls": 0,
+   "failed_tool_calls": 35,
+   "invalid_replies": 51,
+   "ran_tests": {
+    "k": 18,
+    "n": 39,
+    "rate": 0.4615,
+    "ci95": [
+     0.3157,
+     0.6143
+    ]
+   },
+   "resolved_when_ran_tests": {
+    "k": 0,
+    "n": 18,
+    "rate": 0.0,
+    "ci95": [
+     0.0,
+     0.1759
+    ]
+   },
+   "resolved_when_no_tests": {
+    "k": 0,
+    "n": 21,
+    "rate": 0.0,
+    "ci95": [
+     0.0,
+     0.1546
+    ]
+   },
+   "cost": {
+    "tool_calls_p50": 2.0,
+    "turns_p50": 5.0,
+    "prompt_tokens_p50": 5741.0,
+    "completion_tokens_p50": 338.0,
+    "seconds_p50": 25.3,
+    "seconds_p90": 52.6,
+    "cpu_minutes_total": 18.8
+   },
+   "model": "qwen2.5-1.5b",
+   "mode": "agent"
+  }
+ },
+ "paired": {
+  "workflow_vs_basic": {
+   "n": 20,
+   "both": 4,
+   "only_first": 6,
+   "only_second": 1,
+   "mcnemar_p": 0.125
+  },
+  "gemma_vs_qwen": {
+   "n": 39,
+   "both": 0,
+   "only_first": 17,
+   "only_second": 0,
+   "mcnemar_p": 0.0
+  }
+ },
+ "per_task": {
+  "units-kg-to-lb": {
+   "oracle": true,
+   "noop": false,
+   "gemma4-e2b.workflow": false,
+   "gemma4-e2b.basic": false,
+   "qwen2.5-1.5b.workflow": false
+  },
+  "units-lb-to-kg": {
+   "oracle": true,
+   "noop": false,
+   "gemma4-e2b.workflow": false,
+   "gemma4-e2b.basic": false,
+   "qwen2.5-1.5b.workflow": false
+  },
+  "units-zero-dimension": {
+   "oracle": true,
+   "noop": false,
+   "gemma4-e2b.workflow": true,
+   "gemma4-e2b.basic": false,
+   "qwen2.5-1.5b.workflow": false
+  },
+  "units-dim-divisor": {
+   "oracle": true,
+   "noop": false,
+   "gemma4-e2b.workflow": true,
+   "gemma4-e2b.basic": true,
+   "qwen2.5-1.5b.workflow": false
+  },
+  "units-chargeable-max": {
+   "oracle": true,
+   "noop": false,
+   "gemma4-e2b.workflow": false,
+   "gemma4-e2b.basic": false,
+   "qwen2.5-1.5b.workflow": false
+  },
+  "units-half-kg-rounding": {
+   "oracle": true,
+   "noop": false,
+   "gemma4-e2b.workflow": false,
+   "gemma4-e2b.basic": false,
+   "qwen2.5-1.5b.workflow": false
+  },
+  "text-postcode-upper": {
+   "oracle": true,
+   "noop": false,
+   "gemma4-e2b.workflow": true,
+   "gemma4-e2b.basic": false,
+   "qwen2.5-1.5b.workflow": false
+  },
+  "text-postcode-inner-space": {
+   "oracle": true,
+   "noop": false,
+   "gemma4-e2b.workflow": false,
+   "gemma4-e2b.basic": true,
+   "qwen2.5-1.5b.workflow": false
+  },
+  "text-sku-digits": {
+   "oracle": true,
+   "noop": false,
+   "gemma4-e2b.workflow": true,
+   "gemma4-e2b.basic": true,
+   "qwen2.5-1.5b.workflow": false
+  },
+  "text-bool-digits": {
+   "oracle": true,
+   "noop": false,
+   "gemma4-e2b.workflow": false,
+   "gemma4-e2b.basic": false,
+   "qwen2.5-1.5b.workflow": false
+  },
+  "text-postcode-area": {
+   "oracle": true,
+   "noop": false,
+   "gemma4-e2b.workflow": true,
+   "gemma4-e2b.basic": true,
+   "qwen2.5-1.5b.workflow": false
+  },
+  "rates-zone-first-letter": {
+   "oracle": true,
+   "noop": false,
+   "gemma4-e2b.workflow": false,
+   "gemma4-e2b.basic": false,
+   "qwen2.5-1.5b.workflow": false
+  },
+  "rates-band-inclusive": {
+   "oracle": true,
+   "noop": false,
+   "gemma4-e2b.workflow": true,
+   "gemma4-e2b.basic": false,
+   "qwen2.5-1.5b.workflow": false
+  },
+  "rates-minimum-charge": {
+   "oracle": true,
+   "noop": false,
+   "gemma4-e2b.workflow": false,
+   "gemma4-e2b.basic": false,
+   "qwen2.5-1.5b.workflow": false
+  },
+  "rates-remote-fee-discounted": {
+   "oracle": true,
+   "noop": false,
+   "gemma4-e2b.workflow": true,
+   "gemma4-e2b.basic": false,
+   "qwen2.5-1.5b.workflow": false
+  },
+  "rates-half-up": {
+   "oracle": true,
+   "noop": false,
+   "gemma4-e2b.workflow": true,
+   "gemma4-e2b.basic": false,
+   "qwen2.5-1.5b.workflow": false
+  },
+  "rates-fuel-rate": {
+   "oracle": true,
+   "noop": false,
+   "gemma4-e2b.workflow": true,
+   "gemma4-e2b.basic": true,
+   "qwen2.5-1.5b.workflow": false
+  },
+  "rates-remote-dest-only": {
+   "oracle": true,
+   "noop": false,
+   "gemma4-e2b.workflow": false,
+   "gemma4-e2b.basic": false,
+   "qwen2.5-1.5b.workflow": false
+  },
+  "rates-full-discount": {
+   "oracle": true,
+   "noop": false,
+   "gemma4-e2b.workflow": true,
+   "gemma4-e2b.basic": false,
+   "qwen2.5-1.5b.workflow": false
+  },
+  "manifest-priority-case": {
+   "oracle": true,
+   "noop": false,
+   "gemma4-e2b.workflow": false,
+   "gemma4-e2b.basic": false,
+   "qwen2.5-1.5b.workflow": false
+  },
+  "manifest-indented-comment": {
+   "oracle": true,
+   "noop": false,
+   "gemma4-e2b.workflow": true,
+   "qwen2.5-1.5b.workflow": false
+  },
+  "manifest-last-wins": {
+   "oracle": true,
+   "noop": false,
+   "gemma4-e2b.workflow": false,
+   "qwen2.5-1.5b.workflow": false
+  },
+  "manifest-total-grams": {
+   "oracle": true,
+   "noop": false,
+   "gemma4-e2b.workflow": true,
+   "qwen2.5-1.5b.workflow": false
+  },
+  "manifest-zero-weight": {
+   "oracle": true,
+   "noop": false,
+   "gemma4-e2b.workflow": true,
+   "qwen2.5-1.5b.workflow": false
+  },
+  "manifest-trailing-semicolon": {
+   "oracle": true,
+   "noop": false,
+   "gemma4-e2b.workflow": false,
+   "qwen2.5-1.5b.workflow": false
+  },
+  "manifest-by-priority-keys": {
+   "oracle": true,
+   "noop": false,
+   "gemma4-e2b.workflow": false,
+   "qwen2.5-1.5b.workflow": false
+  },
+  "dock-touching-slots": {
+   "oracle": true,
+   "noop": false,
+   "gemma4-e2b.workflow": false,
+   "qwen2.5-1.5b.workflow": false
+  },
+  "dock-exact-gap": {
+   "oracle": true,
+   "noop": false,
+   "gemma4-e2b.workflow": false,
+   "qwen2.5-1.5b.workflow": false
+  },
+  "dock-close-boundary": {
+   "oracle": true,
+   "noop": false,
+   "gemma4-e2b.workflow": true,
+   "qwen2.5-1.5b.workflow": false
+  },
+  "dock-before-open": {
+   "oracle": true,
+   "noop": false,
+   "gemma4-e2b.workflow": true,
+   "qwen2.5-1.5b.workflow": false
+  },
+  "dock-utilization-clip": {
+   "oracle": true,
+   "noop": false,
+   "gemma4-e2b.workflow": false,
+   "qwen2.5-1.5b.workflow": false
+  },
+  "dock-fmt-padding": {
+   "oracle": true,
+   "noop": false,
+   "gemma4-e2b.workflow": true,
+   "qwen2.5-1.5b.workflow": false
+  },
+  "tracking-hold-in-transit": {
+   "oracle": true,
+   "noop": false,
+   "gemma4-e2b.workflow": false,
+   "qwen2.5-1.5b.workflow": false
+  },
+  "tracking-weekend": {
+   "oracle": true,
+   "noop": false,
+   "gemma4-e2b.workflow": false,
+   "qwen2.5-1.5b.workflow": false
+  },
+  "tracking-standard-days": {
+   "oracle": true,
+   "noop": false,
+   "gemma4-e2b.workflow": false,
+   "qwen2.5-1.5b.workflow": false
+  },
+  "tracking-late-on-day": {
+   "oracle": true,
+   "noop": false,
+   "gemma4-e2b.workflow": true,
+   "qwen2.5-1.5b.workflow": false
+  },
+  "tracking-state-update": {
+   "oracle": true,
+   "noop": false,
+   "gemma4-e2b.workflow": false,
+   "qwen2.5-1.5b.workflow": false
+  },
+  "tracking-unknown-state": {
+   "oracle": true,
+   "noop": false,
+   "gemma4-e2b.workflow": false,
+   "qwen2.5-1.5b.workflow": false
+  },
+  "timed-service": {
+   "oracle": true,
+   "noop": false,
+   "gemma4-e2b.workflow": false,
+   "qwen2.5-1.5b.workflow": false
+  }
+ }
+}

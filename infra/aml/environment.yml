@@ -1,0 +1,12 @@
+name: swe-agent-eval
+channels: [conda-forge]
+dependencies:
+  - python=3.13
+  - git
+  - bubblewrap
+  - pip
+  - pip:
+      - vllm==0.33.0
+      - pytest==9.2.0
+      - numpy==2.5.4
+      - pyyaml==6.0.3

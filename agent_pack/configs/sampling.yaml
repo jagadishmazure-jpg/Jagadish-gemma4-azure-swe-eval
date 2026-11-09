@@ -1,0 +1,4 @@
+# Same settings as the local measurement: greedy, short replies.
+temperature: 0.0
+max_output_tokens: 256
+seed: 0
