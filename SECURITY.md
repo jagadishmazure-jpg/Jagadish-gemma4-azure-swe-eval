@@ -24,7 +24,7 @@ vulnerability**, when available). Please do not open a public issue. First reply
   GitHub Code Security while the repository is private; the job is skipped until then)
 - gitleaks over the full git history in CI
 - Every GitHub Action pinned to a commit SHA; workflow tokens are read-only
-- `main` is protected: no force-push or deletion, and pull requests need the CI checks
+- Branch rules for `main` (no force-push or deletion, required CI checks) are not enforced while the repository is private on the current plan; they are applied once it is public or the plan allows it
 - The deploy workflow is manual, gated by `DEPLOY_ENABLED`, and logs in with OIDC (no client secret)
 - Model weights come from pinned revisions and are checked by SHA-256; GGUF only, never pickle files
 - Measured trajectories are checked against a hash manifest, so a changed data file fails CI
