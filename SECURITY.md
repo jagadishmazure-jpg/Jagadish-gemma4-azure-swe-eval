@@ -6,8 +6,8 @@ and test is synthetic.
 
 ## Report a vulnerability
 
-Please report privately through GitHub: open the **Security** tab and choose **Report a vulnerability**
-(private vulnerability reporting is on). Please do not open a public issue. First reply within a week.
+Please report privately to the repository owner through GitHub (the **Security** tab, **Report a
+vulnerability**, when available). Please do not open a public issue. First reply within a week.
 
 ## Controls in place
 
@@ -20,7 +20,8 @@ Please report privately through GitHub: open the **Security** tab and choose **R
   on a fresh checkout with tests it never saw.
 - Model output is scrubbed of real brand names before it is stored or scored.
 - Secret scanning with push protection, Dependabot alerts and security updates
-- CodeQL (`security-and-quality`) on every push and weekly
+- CodeQL (`security-and-quality`) on every push and weekly when code scanning is available (it needs
+  GitHub Code Security while the repository is private; the job is skipped until then)
 - gitleaks over the full git history in CI
 - Every GitHub Action pinned to a commit SHA; workflow tokens are read-only
 - `main` is protected: no force-push or deletion, and pull requests need the CI checks

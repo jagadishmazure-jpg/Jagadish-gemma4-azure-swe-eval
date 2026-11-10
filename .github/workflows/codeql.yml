@@ -10,6 +10,9 @@ permissions:
   contents: read
 jobs:
   analyze:
+    # Code scanning needs GitHub Code Security on private repositories (a paid feature). The job is
+    # skipped while the repository is private and runs again as soon as code scanning is available.
+    if: ${{ !github.event.repository.private }}
     runs-on: ubuntu-latest
     timeout-minutes: 30
     permissions:
