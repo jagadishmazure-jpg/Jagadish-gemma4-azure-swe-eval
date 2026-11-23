@@ -4,11 +4,11 @@ version = "1.0.0"
 description = "Coding-agent evaluation on CPU: Gemma 4 E2B fixing planted bugs in a fictional freight codebase."
 requires-python = ">=3.12"
 license = { text = "MIT" }
-dependencies = ["numpy==2.5.4", "pyyaml==6.0.3"]
+dependencies = ["numpy==2.5.5", "pyyaml==6.0.3"]
 
 [project.optional-dependencies]
-dev = ["pytest==9.2.0", "ruff==0.17.4"]
-measure = ["llama-cpp-python==0.3.36"]
+dev = ["pytest==9.2.0", "ruff==0.17.6"]
+measure = ["llama-cpp-python==0.3.37"]
 
 [build-system]
 requires = ["hatchling"]
